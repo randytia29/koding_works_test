@@ -12,7 +12,7 @@ class LatestInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.whiteColor,
-      height: 300,
+      height: 275,
       width: AppConfig.widthScreen(context),
       padding: EdgeInsets.symmetric(
           horizontal: AppConfig.paddingHorizontal,

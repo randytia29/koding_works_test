@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kodingworkstest/app/config.dart';
+import 'package:kodingworkstest/features/home/presentation/widgets/category_product.dart';
 import 'package:kodingworkstest/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:kodingworkstest/features/home/presentation/widgets/latest_info.dart';
 
@@ -36,6 +37,10 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: const [
                   LatestInfo(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CategoryProduct()
                 ],
               ),
             ),
