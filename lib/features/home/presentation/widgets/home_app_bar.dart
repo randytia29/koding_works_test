@@ -16,11 +16,13 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: AppConfig.widthScreen(context),
-      height: 200,
+      height: AppConfig.heightHomeAppBar,
+      decoration: const BoxDecoration(color: AppColors.whiteColor, boxShadow: [
+        BoxShadow(color: AppColors.greyColor, blurRadius: 2, spreadRadius: 2)
+      ]),
       padding: EdgeInsets.symmetric(
           horizontal: AppConfig.paddingHorizontal,
           vertical: AppConfig.paddingVertical),
-      color: AppColors.whiteColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.end,

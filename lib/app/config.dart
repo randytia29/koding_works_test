@@ -10,6 +10,8 @@ class AppConfig {
   static double paddingHorizontal = 24.0;
   static double paddingVertical = 24.0;
 
+  static double heightHomeAppBar = 200.0;
+
   static InputBorder searchInputBorder = OutlineInputBorder(
       borderSide: BorderSide.none, borderRadius: BorderRadius.circular(50));
 }
