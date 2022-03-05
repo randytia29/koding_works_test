@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kodingworkstest">
    <application
-        android:label="ui_practice"
+        android:label="Koding Works Test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
