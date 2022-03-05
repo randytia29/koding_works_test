@@ -7,6 +7,8 @@ import 'package:kodingworkstest/app/runner.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // setupLocator();
+
   runZonedGuarded(
     runnerApp,
     (error, stackTrace) => log(
