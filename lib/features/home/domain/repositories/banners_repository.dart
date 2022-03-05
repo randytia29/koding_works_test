@@ -1,4 +1,4 @@
-import 'package:kodingworkstest/features/home/domain/entities/banners.dart';
+import '../entities/banners.dart';
 
 abstract class BannersRepository {
   Future<List<Banners>?> getBanners();

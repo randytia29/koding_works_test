@@ -1,6 +1,6 @@
-import 'package:kodingworkstest/features/home/data/models/aspect_ratio_model.dart';
-import 'package:kodingworkstest/features/home/data/models/image_model.dart';
-import 'package:kodingworkstest/features/home/domain/entities/banners.dart';
+import '../../domain/entities/banners.dart';
+import 'aspect_ratio_model.dart';
+import 'image_model.dart';
 
 class BannersModel extends Banners {
   const BannersModel(

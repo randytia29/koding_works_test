@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kodingworkstest/app/config.dart';
-import 'package:kodingworkstest/app/locator.dart';
-import 'package:kodingworkstest/features/home/presentation/bloc/banners_bloc.dart';
-import 'package:kodingworkstest/features/home/presentation/widgets/category_product.dart';
-import 'package:kodingworkstest/features/home/presentation/widgets/home_app_bar.dart';
-import 'package:kodingworkstest/features/home/presentation/widgets/latest_info.dart';
+import '../../../../../app/config.dart';
+import '../../../../../app/locator.dart';
+import '../../bloc/banners_bloc.dart';
+import '../../bloc/categories_bloc.dart';
+import '../../widgets/category_product.dart';
+import '../../widgets/home_app_bar.dart';
+import '../../widgets/latest_info.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final bannersBloc = getIt<BannersBloc>();
+  final categoriesBloc = getIt<CategoriesBloc>();
 
   late TextEditingController searchController;
 
@@ -23,6 +25,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     searchController = TextEditingController();
     bannersBloc.add(FetchBanners());
+    categoriesBloc.add(FetchCategories());
     super.initState();
   }
 
@@ -30,14 +33,22 @@ class _HomePageState extends State<HomePage> {
   void dispose() {
     searchController.dispose();
     bannersBloc.close();
+    categoriesBloc.close();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => bannersBloc,
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => bannersBloc,
+          ),
+          BlocProvider(
+            create: (context) => categoriesBloc,
+          )
+        ],
         child: Stack(
           children: [
             Padding(

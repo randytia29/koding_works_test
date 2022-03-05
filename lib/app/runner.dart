@@ -3,8 +3,9 @@ import 'dart:developer';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kodingworkstest/app/app.dart';
-import 'package:kodingworkstest/core/helpers/app_bloc_observer.dart';
+
+import '../core/helpers/app_bloc_observer.dart';
+import 'app.dart';
 
 void runnerApp() {
   runZonedGuarded(

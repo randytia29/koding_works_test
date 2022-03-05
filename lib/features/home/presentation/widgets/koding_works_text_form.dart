@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kodingworkstest/app/config.dart';
-import 'package:kodingworkstest/core/preferences/colors.dart';
+import '../../../../app/config.dart';
+import '../../../../core/preferences/colors.dart';
 
 class KodingWorksTextForm extends StatelessWidget {
   const KodingWorksTextForm({

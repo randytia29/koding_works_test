@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:kodingworkstest/core/error/exceptions.dart';
-import 'package:kodingworkstest/features/home/data/models/banners_model.dart';
+import '../../../../app/config.dart';
+import '../../../../core/error/exceptions.dart';
+import '../models/banners_model.dart';
 
 abstract class BannersRemoteDataSource {
   Future<List<BannersModel>> getBanners();
@@ -14,12 +15,8 @@ class BannersRemoteDataSourceImpl implements BannersRemoteDataSource {
   @override
   Future<List<BannersModel>> getBanners() async {
     try {
-      final response =
-          await dio.get('https://api.warung.io/customer/ecommerce/banners',
-              options: Options(headers: {
-                'x-location-id': '60e466dfa18eb7bde1b4c2bb',
-                'x-tenant-id': '60e466dfa18eb7bde1b4c2aa'
-              }));
+      final response = await dio.get('${AppConfig.baseUrl}/banners',
+          options: Options(headers: AppConfig.headersApi));
 
       if (response.statusCode == 200) {
         return List.from(response.data['data'])

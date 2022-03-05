@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:kodingworkstest/features/home/domain/entities/banners.dart';
-import 'package:kodingworkstest/features/home/domain/usecases/get_banners.dart';
+import '../../domain/entities/banners.dart';
+import '../../domain/usecases/get_banners.dart';
 
 part 'banners_event.dart';
 part 'banners_state.dart';

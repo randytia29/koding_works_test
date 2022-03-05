@@ -1,4 +1,4 @@
-import 'package:kodingworkstest/features/home/domain/entities/aspect_ratio.dart';
+import '../../domain/entities/aspect_ratio.dart';
 
 class AspectRatioModel extends AspectRatio {
   const AspectRatioModel({required int width, required int height})

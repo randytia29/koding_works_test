@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kodingworkstest/app/config.dart';
-import 'package:kodingworkstest/core/preferences/colors.dart';
-import 'package:kodingworkstest/features/home/presentation/widgets/koding_works_text_form.dart';
-import 'package:kodingworkstest/features/home/presentation/widgets/location_market.dart';
+import '../../../../app/config.dart';
+import '../../../../core/preferences/colors.dart';
+import 'koding_works_text_form.dart';
+import 'location_market.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({

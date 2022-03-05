@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:kodingworkstest/core/usecases/usecase.dart';
-import 'package:kodingworkstest/features/home/domain/entities/banners.dart';
-import 'package:kodingworkstest/features/home/domain/repositories/banners_repository.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../entities/banners.dart';
+import '../repositories/banners_repository.dart';
 
 class GetBanners implements Usecase<List<Banners>, Params> {
   final BannersRepository repository;

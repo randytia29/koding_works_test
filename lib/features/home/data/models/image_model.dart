@@ -1,4 +1,4 @@
-import 'package:kodingworkstest/features/home/domain/entities/image.dart';
+import '../../domain/entities/image.dart';
 
 class ImageModel extends Image {
   const ImageModel({required String id, required String url})

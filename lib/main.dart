@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:kodingworkstest/app/locator.dart';
-import 'package:kodingworkstest/app/runner.dart';
+import 'app/locator.dart';
+import 'app/runner.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

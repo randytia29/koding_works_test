@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:kodingworkstest/features/home/data/models/aspect_ratio_model.dart';
-import 'package:kodingworkstest/features/home/data/models/image_model.dart';
+import '../../data/models/aspect_ratio_model.dart';
+import '../../data/models/image_model.dart';
 
 class Banners extends Equatable {
   const Banners({
