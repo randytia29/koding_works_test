@@ -1,20 +1,20 @@
 import 'package:dio/dio.dart';
 import '../../../../app/config.dart';
 import '../../../../core/error/exceptions.dart';
-import '../models/categories_model.dart';
+import '../models/category_model.dart';
 
-abstract class CategoriesRemoteDataSource {
-  Future<List<CategoriesModel>> getCategories(
+abstract class CategoryRemoteDataSource {
+  Future<List<CategoryModel>> getCategory(
       {required int page, required int perPage, required bool isParent});
 }
 
-class CategoriesRemoteDataSourceImpl implements CategoriesRemoteDataSource {
+class CategoryRemoteDataSourceImpl implements CategoryRemoteDataSource {
   final Dio dio;
 
-  CategoriesRemoteDataSourceImpl({required this.dio});
+  CategoryRemoteDataSourceImpl({required this.dio});
 
   @override
-  Future<List<CategoriesModel>> getCategories(
+  Future<List<CategoryModel>> getCategory(
       {required int page, required int perPage, required bool isParent}) async {
     try {
       final response = await dio.get('${AppConfig.baseUrl}/products/categories',
@@ -27,7 +27,7 @@ class CategoriesRemoteDataSourceImpl implements CategoriesRemoteDataSource {
 
       if (response.statusCode == 200) {
         return List.from(response.data['data'])
-            .map((e) => CategoriesModel.fromJson(e))
+            .map((e) => CategoryModel.fromJson(e))
             .toList();
       } else {
         throw ServerException();

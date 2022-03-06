@@ -1,8 +1,8 @@
-import '../../domain/entities/categories.dart';
+import '../../domain/entities/category.dart';
 import 'image_model.dart';
 
-class CategoriesModel extends Categories {
-  const CategoriesModel(
+class CategoryModel extends Category {
+  const CategoryModel(
       {required String id,
       required String name,
       required String slug,
@@ -10,8 +10,7 @@ class CategoriesModel extends Categories {
       required int priority})
       : super(id: id, name: name, slug: slug, image: image, priority: priority);
 
-  factory CategoriesModel.fromJson(Map<String, dynamic> json) =>
-      CategoriesModel(
+  factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
         id: json["id"],
         name: json["name"],
         slug: json["slug"],

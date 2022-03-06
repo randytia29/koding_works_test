@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import '../../../../core/preferences/colors.dart';
-import '../../domain/entities/categories.dart';
+import '../../domain/entities/category.dart';
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
@@ -8,7 +8,7 @@ class CategoriesCard extends StatelessWidget {
     required this.categories,
   }) : super(key: key);
 
-  final Categories categories;
+  final Category categories;
 
   @override
   Widget build(BuildContext context) {

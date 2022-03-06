@@ -2,8 +2,8 @@ import 'package:equatable/equatable.dart';
 
 import '../../data/models/image_model.dart';
 
-class Categories extends Equatable {
-  const Categories({
+class Category extends Equatable {
+  const Category({
     required this.id,
     required this.name,
     required this.slug,

@@ -1,16 +1,16 @@
 import 'package:equatable/equatable.dart';
 import '../../../../core/usecases/usecase.dart';
-import '../entities/categories.dart';
-import '../repositories/categories_repository.dart';
+import '../entities/category.dart';
+import '../repositories/category_repository.dart';
 
-class GetCategories implements Usecase<List<Categories>, Params> {
-  final CategoriesRepository repository;
+class GetCategory implements Usecase<List<Category>, Params> {
+  final CategoryRepository repository;
 
-  GetCategories({required this.repository});
+  GetCategory({required this.repository});
 
   @override
-  Future<List<Categories>?> call(Params params) async {
-    return await repository.getCategories(
+  Future<List<Category>?> call(Params params) async {
+    return await repository.getCategory(
         page: params.page, perPage: params.perPage, isParent: params.isParent);
   }
 }

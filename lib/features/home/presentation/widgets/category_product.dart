@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../app/config.dart';
 import '../../../../core/preferences/colors.dart';
-import '../bloc/categories_bloc.dart';
+import '../bloc/category_bloc.dart';
 import 'categories_card.dart';
 
 class CategoryProduct extends StatelessWidget {
@@ -19,13 +19,13 @@ class CategoryProduct extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: AppConfig.paddingHorizontal,
           vertical: AppConfig.paddingVertical),
-      child: BlocBuilder<CategoriesBloc, CategoriesState>(
+      child: BlocBuilder<CategoryBloc, CategoryState>(
         builder: (context, categoriesState) {
-          if (categoriesState is CategoriesLoading) {
+          if (categoriesState is CategoryLoading) {
             return AppConfig.loadingKodingWorks;
           }
 
-          if (categoriesState is CategoriesLoaded) {
+          if (categoriesState is CategoryLoaded) {
             final categories = categoriesState.categories;
 
             return Wrap(

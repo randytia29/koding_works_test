@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../app/config.dart';
 import '../../../../../app/locator.dart';
 import '../../bloc/banners_bloc.dart';
-import '../../bloc/categories_bloc.dart';
+import '../../bloc/category_bloc.dart';
 import '../../widgets/category_product.dart';
 import '../../widgets/home_app_bar.dart';
 import '../../widgets/latest_info.dart';
@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final bannersBloc = getIt<BannersBloc>();
-  final categoriesBloc = getIt<CategoriesBloc>();
+  final categoriesBloc = getIt<CategoryBloc>();
 
   late TextEditingController searchController;
 
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     searchController = TextEditingController();
     bannersBloc.add(FetchBanners());
-    categoriesBloc.add(FetchCategories());
+    categoriesBloc.add(FetchCategory());
     super.initState();
   }
 
